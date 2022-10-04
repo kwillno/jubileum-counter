@@ -1,7 +1,3 @@
-import { getServerDate } from "./server-date/serverDate.js";
-
-const { date, offset, uncertainty } = await getServerDate();
-
 // Countdown code
 var dateDiff ={
 
@@ -26,8 +22,7 @@ var dateDiff ={
 
 // Time until Jubilee begins
 function timeUntil(timeGoal){
-	// var localTime = new Date();
-	var localTime = new Date(Date.now() + offset);
+	var localTime = new Date();
 
 	var tv = dateDiff.timer(localTime,timeGoal);
 
